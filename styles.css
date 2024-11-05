@@ -63,6 +63,20 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.hamburger.open {
+    transform: rotate(90deg);
+}
+
+.hamburger:before {
+    content: "☰";
+    display: inline-block;
+}
+
+.hamburger.open:before {
+    content: "✖";
 }
 
 .content {
