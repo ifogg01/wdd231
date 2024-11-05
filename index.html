@@ -4,11 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD231</title>
+    <title>Isaac Fogg-Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lemon&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
-    <h1>Fogg- Test WDD231</h1>
+    <header class="header">
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Isaac Fogg</h1>
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav class="navbar">
+            <a href="https://ifogg01.github.io/wdd231/" class="active">Home</a>
+            <a href="https://www.tooelechamber.com/">Chamber</a>
+            <a href="https://github.com/ifogg01">GitHub Profile</a>
+            <a href="https://www.linkedin.com/feed/?trk=onboarding-landing">LinkedIn</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="card coursework">
+                <h2>Course Work</h2>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="card location">
+                <h2>Tooele Utah</h2>
+                <img src="images/tooeletitle.jpg" alt="Tooele Background">
+                <p>Oquirrh Mountains</p>
+            </div>
+        </section>
+
+        <section class="certificates">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filter-buttons">
+                <button onclick="filterCourses('all')" class="active">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
+            </div>
+            <div class="course-list">
+                <button class="course CSE">CSE 110</button>
+                <button class="course WDD">WDD 130</button>
+                <button class="course CSE">CSE 111</button>
+                <button class="course CSE">CSE 210</button>
+                <button class="course WDD">WDD 131</button>
+                <button class="course WDD">WDD 231</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy;2024 Isaac Fogg - UT</p>
+        <p>Last Update: <span id="lastModified">Loading...</span></p>
+    </footer>
+
+
 </body>
 
 </html>
