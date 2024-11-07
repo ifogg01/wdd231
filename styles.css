@@ -9,11 +9,13 @@ body {
     color: #333;
 }
 
+
 .header {
     background-color: #2f496e;
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 .profile {
@@ -27,6 +29,42 @@ body {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s ease;
+}
+
+img{
+    width: 100% ;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none; 
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .navbar.show {
+        display: flex; 
+    }
 }
 
 .navbar {
@@ -51,32 +89,6 @@ body {
     box-shadow: 0 2px 5px rgba(250, 249, 249);
     transform: scale(1.2);
     transition: all 0.3s ease 0s;
-}
-
-.hamburger {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    transition: transform 0.3s ease;
-}
-
-.hamburger.open {
-    transform: rotate(90deg);
-}
-
-.hamburger:before {
-    content: "☰";
-    display: inline-block;
-}
-
-.hamburger.open:before {
-    content: "✖";
 }
 
 .content {
@@ -127,7 +139,6 @@ body {
 
 .filter-buttons button.active {
     background-color: #6a6a6a;
-    
 }
 
 .course-list {
@@ -137,28 +148,29 @@ body {
     gap: 15px;
 }
 
+
 .course {
-    padding: 15px 25px;
-    background-color: #58064e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.course-list button{
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-family: sans-serif;
+    padding: 15px 20px;
     font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.course-list :hover{
-    box-shadow: 0 2px 5px rgba(250, 249, 249);
-    transform: scale(1.2);
-    transition: all 0.3s ease 0s;
+.course.completed {
+    background-color: purple;
+    color: white;
+}
+
+.course.not-completed {
+    background-color: grey;
+    color: white;
+}
+
+.course:hover {
+    transform: scale(1.1);
 }
 
 .footer {
@@ -214,30 +226,21 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .profile-pic {
-        width: 40px;
-        height: 40px;
-    }
+.course-details {
+    background-color: #f3f4f6;
+    padding: 15px;
+    border: 1px solid #f102fe;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+    text-align: left;
+}
 
-    .navbar a {
-        padding: 8px 12px;
-        font-size: 0.9em;
-    }
+.course-details h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
 
-    .filter-buttons button {
-        width: 45%;
-        font-size: 0.9em;
-        padding: 8px 15px;
-    }
-
-    .course {
-        width: 80%;
-        font-size: 0.9em;
-        padding: 10px 15px;
-    }
-
-    .footer p {
-        font-size: 0.9em;
-    }
+.course-details p {
+    margin: 5px 0;
 }

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lemon&display=swap" rel="stylesheet">
+    <script src="courses.js" defer></script>
     <script src="scripts.js" defer></script>
 </head>
 
@@ -19,7 +20,8 @@
             <h1>Isaac Fogg</h1>
         </div>
 
-        <button class="hamburger" onclick="toggleMenu()"></button>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
         <nav class="navbar">
             <a href="https://ifogg01.github.io/wdd231/" class="active">Home</a>
             <a href="https://www.tooelechamber.com/">Chamber</a>
@@ -48,27 +50,23 @@
         <section class="certificates">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="filter-buttons">
-                <button onclick="filterCourses('all')" class="active">All</button>
-                <button onclick="filterCourses('CSE')">CSE</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
             </div>
-            <div class="course-list">
-                <button class="course CSE">CSE 110</button>
-                <button class="course WDD">WDD 130</button>
-                <button class="course CSE">CSE 111</button>
-                <button class="course CSE">CSE 210</button>
-                <button class="course WDD">WDD 131</button>
-                <button class="course WDD">WDD 231</button>
+            <div id="totalCredits">Total Credits: 0</div>
+            <div class="course-list"></div>
+            <div id="courseDetails" class="course-details">
+
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <p>&copy;2024 Isaac Fogg - UT</p>
+        <p>&copy; Isaac Fogg - UT</p>
         <p>Last Update: <span id="lastModified">Loading...</span></p>
     </footer>
-
-
 </body>
 
 </html>
