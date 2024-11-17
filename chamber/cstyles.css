@@ -192,17 +192,21 @@ body {
     
 }
 
-
 .weather-section {
-    display:inline-flex;
+    display: inline-flex;
     gap: 20px;
-    background-color: #394973;
+    background-color: #2c377b; 
+    color: #ffffff; 
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-left: 5px;
-    margin-top: -15%;
-    width:auto;
+    width: auto;
 }
+
+.weather-section h1 {
+    color: #f8f8f8; 
+}
+
 
 .current-weather {
     margin-top: -5px;
