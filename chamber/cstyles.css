@@ -21,8 +21,7 @@ body {
     align-items: center;
     width: 100%;
     padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.6);
-    position: fixed;
+    background-color: rgba(255, 255, 255, 0.9);    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
@@ -42,8 +41,7 @@ body {
 .logo-text {
     font-size: 2em;
     font-weight: bold;
-    color: rgb(123, 104, 238);
-}
+    color: #3b1e8f;}
 
 .nav {
     display: flex;
@@ -53,15 +51,15 @@ body {
 .nav-link {
     text-decoration: none;
     font-size: 1em;
-    color: #560551b6;
+    color: #ffffff;
     font-weight: bold;
     padding: 10px 15px;
-    background-color: rgba(136, 148, 188, 0.8);
+    background-color: #4b5b95;
     border-radius: 5px;
 }
 
 .nav-link:hover {
-    background-color: #7771f1;
+    background-color: #2c377b;
     color: #ffffff;
 }
 
@@ -148,7 +146,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    color: #f0f0f0;
     text-align: center;
     padding: 20px;
 }
@@ -169,7 +167,7 @@ body {
 
 .weather-forecast {
     gap: 20px; 
-    background-color: rgba(136, 148, 188, 0.8);
+    background-color: #394973;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -179,7 +177,8 @@ body {
 }
 
 .forecast-item {
-    background-color: #ddd;
+    background-color: #ececec;
+    color: #333333;
     padding: 15px;
     border-radius: 8px;
     text-align:center;
@@ -197,7 +196,7 @@ body {
 .weather-section {
     display:inline-flex;
     gap: 20px;
-    background-color: rgba(136, 148, 188, 0.8);
+    background-color: #394973;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -207,11 +206,11 @@ body {
 }
 
 .current-weather {
-    display: grid 1fr 1fr;
     margin-top: -5px;
     text-align: end;
     align-items:end;
-    background-color: #ddd;
+    background-color: #ececec;
+    color: #333333;
     padding: 25px;
     border-radius: 8px;
     text-align: center;
@@ -230,7 +229,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ddd;
+    background-color: #ececec;
+    color: #333333;
     padding: 25px;
     border-radius: 8px;
     height: 400px;
@@ -251,18 +251,18 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: rgba(136, 148, 188, 0.8);
-    color: white;
+    background-color: #4b5b95; 
+    color: #ffffff;;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
 .toggle-button:hover {
-    background-color: #7771f1;
+    background-color: #2c377b;
 }
 
 .toggle-button.active {
-    background-color: #560551b6;
+    background-color: #3b1e8f
 }
 
 .business-directory.list-view {
@@ -302,7 +302,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #f4f4f4;
+    background-color: #ffffff; 
+    color: #333333;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -313,8 +314,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background-color: rgba(136, 148, 188, 0.8);
-    color: #000;
+    background-color: #394973; 
+    color: #ffffff;
     text-align: center;
     flex-wrap: wrap;
 }
