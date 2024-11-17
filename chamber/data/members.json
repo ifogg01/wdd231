@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Tooele Valley Chiropractic",
+        "address": "62 E 1000 N, Tooele, UT 84074",
+        "phone": "(435) 882-0870",
+        "website": "https://tooelevalleychiro.com",
+        "image": "images/tchiro.jpg",
+        "membership_level": 3,
+        "description": "Specializes in chiropractic care, sports injuries, and family wellness.",
+        "hours": "Mon-Fri 9am-6pm, Sat 9am-1pm"
+    },
+    {
+        "name": "Mountain West Medical Center",
+        "address": "2055 N Main St, Tooele, UT 84074",
+        "phone": "(435) 843-3600",
+        "website": "https://www.mountainwestmc.com",
+        "image": "images/mwest.png",
+        "membership_level": 2,
+        "description": "Community hospital offering emergency services, surgery, and wellness programs.",
+        "hours": "24/7"
+    },
+    {
+        "name": "Tooele Valley Nursery",
+        "address": "425 E Cimmarron Way, Tooele, UT 84074",
+        "phone": "(435) 882-8880",
+        "website": "https://tooelevalleynursery.com",
+        "image": "images/nursery.jpg",
+        "membership_level": 1,
+        "description": "Nursery and landscaping store specializing in Utah native plants and gardening supplies.",
+        "hours": "Mon-Sat 8am-5pm, Closed Sun"
+    },
+    {
+        "name": "The Wigwam Western Summit",
+        "address": "10 E Vine St, Tooele, UT 84074",
+        "phone": "(435) 882-3168",
+        "website": "https://wigwamwestern.com",
+        "image": "images/wigwam.png",
+        "membership_level": 3,
+        "description": "Family-owned restaurant and western-themed dining experience in downtown Tooele.",
+        "hours": "Mon-Thu 11am-9pm, Fri-Sat 11am-10pm, Closed Sun"
+    },
+    {
+        "name": "Tooele Valley Realty",
+        "address": "217 S Main St, Tooele, UT 84074",
+        "phone": "(435) 882-3888",
+        "website": "https://tooelevalleyrealty.com",
+        "image": "images/realty.jpg",
+        "membership_level": 2,
+        "description": "Full-service real estate agency with local expertise in Tooele Valley housing market.",
+        "hours": "Mon-Fri 9am-5pm, Sat by appointment"
+    },
+    {
+        "name": "The Quilted Bear",
+        "address": "221 W 200 S, Tooele, UT 84074",
+        "phone": "(435) 843-9990",
+        "website": "https://thequiltedbear.com",
+        "image": "images/quilt.png",
+        "membership_level": 1,
+        "description": "Quilting and sewing supply store offering fabrics, patterns, and classes for all levels.",
+        "hours": "Mon-Sat 10am-6pm, Closed Sun"
+    },
+    {
+        "name": "Tooele Tire Company",
+        "address": "125 S Main St, Tooele, UT 84074",
+        "phone": "(435) 882-0000",
+        "website": "https://tooele-tire.com",
+        "image": "images/tire.png",
+        "membership_level": 3,
+        "description": "Automotive tire shop providing tire services, alignments, and vehicle maintenance.",
+        "hours": "Mon-Fri 8am-6pm, Sat 8am-4pm, Closed Sun"
+    },
+    {
+        "name": "Nigh-time Doughnuts",
+        "address": "299 N Main St, Tooele, UT 84074",
+        "phone": "435-555-1234",
+        "website": "nightimedonutsut.com",
+        "image": "images/nightime.jpg",
+        "membership_level": 1,
+        "description": "Freshly baked goods every day!",
+        "hours": "Mon-Sat 5am-2pm, Closed Sun"
+    }
+]

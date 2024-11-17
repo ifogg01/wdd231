@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    color: #424291;
+    padding: 20px 0;
+    text-align: center;
+    font-family: "Metal Mania";
+    font-style:oblique;
+    font-size: 30px;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#cards section {
+    background-color: #e0e0eb;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#cards h2 {
+    font-size: 1.2em;
+    color: #424291;
+    margin-bottom: 10px;
+    font-family: "Almendra", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#cards p {
+    font-size: 0.9em;
+    color: #333333;
+    margin: 5px 0;
+}
+
+#cards img {
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em; 
+    }
+
+    #cards {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+
+    #cards section {
+        padding: 10px; 
+    }
+
+    footer {
+        font-size: 0.8em; 
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em; 
+    }
+
+    #cards h2 {
+        font-size: 1em; 
+    }
+
+    #cards p {
+        font-size: 0.8em; 
+    }
+
+    footer {
+        font-size: 0.7em; 
+    }
+}

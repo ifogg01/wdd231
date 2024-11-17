@@ -67,11 +67,14 @@ function updateFooterDates() {
 
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
+    const hamburger = document.querySelector('.hamburger');
+    
     navbar.classList.toggle('show');
+    hamburger.classList.toggle('open');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     displayCourses('all'); 
     setupFilterButtons();
-    updateFooterDates(); 
+    updateFooterDates();
 });
