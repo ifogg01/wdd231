@@ -54,8 +54,8 @@ body {
     color: #ffffff;
     font-weight: bold;
     padding: 10px 15px;
-    background-color: #4b5b95;
-    border-radius: 5px;
+    background-color: #472b9a;
+        border-radius: 5px;
 }
 
 .nav-link:hover {
@@ -199,7 +199,6 @@ body {
     background-color: #394973;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     margin-left: 5px;
     margin-top: -15%;
     width:auto;
@@ -251,7 +250,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #4b5b95; 
+    background-color: #2c377b; 
     color: #ffffff;;
     font-weight: bold;
     transition: background-color 0.3s;
