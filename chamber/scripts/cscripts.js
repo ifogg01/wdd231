@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     loadMembers();
+    loadSpotlight(); 
     updateLastModified();
     loadWeather();
     loadForecast();
 
-    setupViewToggle(); 
+    setupViewToggle();
 });
 
 function setupViewToggle() {
@@ -91,6 +92,50 @@ function displayMembers(members) {
     console.log("Business directory populated with member data.");
 }
 
+async function loadSpotlight() {
+    try {
+        const response = await fetch("data/members.json");
+        if (!response.ok) {
+            throw new Error("Failed to fetch members data");
+        }
+
+        const members = await response.json();
+        displaySpotlight(members);
+    } catch (error) {
+        console.error("Error loading spotlight members:", error);
+    }
+}
+
+function displaySpotlight(members) {
+    const spotlightSection = document.querySelector("#spotlight-cards");
+    spotlightSection.innerHTML = "";
+
+    if (!members || members.length === 0) {
+        spotlightSection.innerHTML = "<p>No spotlight members available to display.</p>";
+        return;
+    }
+
+    const shuffledMembers = members.sort(() => 0.5 - Math.random());
+    const spotlightMembers = shuffledMembers.slice(0, 3);
+
+    spotlightMembers.forEach((member) => {
+        const spotlightCard = document.createElement("div");
+        spotlightCard.classList.add("spotlight-card");
+
+        spotlightCard.innerHTML = `
+            <img src="${member.image}" alt="${member.name}">
+            <h2>${member.name}</h2>
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p><strong>Membership Level:</strong> ${member.membership_level}</p>
+        `;
+
+        spotlightSection.appendChild(spotlightCard);
+    });
+
+    console.log("Spotlight members displayed.");
+}
 
 function updateLastModified() {
     const lastModifiedElement = document.querySelector(".credits p:last-child");
@@ -103,9 +148,9 @@ function updateLastModified() {
 }
 
 async function loadWeather() {
-    const apiKey = "86493188d381051ddea532b770ad1bf1"; 
+    const apiKey = "86493188d381051ddea532b770ad1bf1";
     const city = "Tooele";
-    const unit = "imperial"; 
+    const unit = "imperial";
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
 
     try {
@@ -147,9 +192,9 @@ function displayWeather(weatherData) {
 }
 
 async function loadForecast() {
-    const apiKey = "86493188d381051ddea532b770ad1bf1"; 
+    const apiKey = "86493188d381051ddea532b770ad1bf1";
     const city = "Tooele";
-    const unit = "imperial"; 
+    const unit = "imperial";
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&appid=${apiKey}`;
 
     try {

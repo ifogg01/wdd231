@@ -16,6 +16,8 @@
     <link rel="icon" href="images/chicon.png">
     <link rel="stylesheet" href="cstyles.css">
     <script src="scripts/cscripts.js" defer></script>
+    <script src="scripts/test.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lemon&display=swap" rel="stylesheet">
@@ -35,26 +37,43 @@
         </div>
         <nav class="nav">
             <a href="https://ifogg01.github.io/wdd231/" class="nav-link">Home</a>
-            <a href="https://ifogg01.github.io/wdd231/chamber/index.html" class="nav-link">Join</a>
+            <a href="https://ifogg01.github.io/wdd231/chamber/directory.html" class="nav-link">Directory</a>
             <a href="#" class="nav-link">Discover</a>
         </nav>
     </header>
 
-    <section class="hero-section"></section>
+    <section class="hero-section2"></section>
     <div class="hero-title">
-        <h1>Check out some of our local businesses</h1>
+        <h1>Welcome to the Tooele City Chamber of Commerce</h1>
+        <p>Connect with local businesses and community events at the Tooele City Chamber of Commerce.</p>
+        <div class="cta-button-container">
+            <a href="https://www.tooelechamber.com/membership-benefits" class="cta-button">Join the Chamber of
+                Commerce</a>
+        </div>
+
     </div>
+
     <main class="content">
-
-
-        <section class="business-directory-section">
-            <h1>Business Directory</h1>
-            <div class="view-toggle">
-                <button id="grid-view" class="toggle-button active">Grid View</button>
-                <button id="list-view" class="toggle-button">List View</button>
+        <section class="events">
+            <h1>Upcoming Events</h1>
+            <div class="events-list">
             </div>
-            <div class="business-directory" id="business-directory"></div>
         </section>
+        <section class="weather-section">
+            <h1>Current Weather</h1>
+            <div class="current-weather">
+            </div>
+        </section>
+        <br><br>
+        <h1>Upcoming Weather Forecast</h1>
+        <div class="weather-forecast">
+        </div>
+
+        <section id="spotlight-section" class="spotlight">
+            <h1>Spotlight Members</h1>
+            <div id="spotlight-cards" class="spotlight-cards"></div>
+        </section>
+
 
     </main>
 

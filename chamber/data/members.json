@@ -70,6 +70,46 @@
         "hours": "Mon-Fri 8am-6pm, Sat 8am-4pm, Closed Sun"
     },
     {
+        "name": "Salt Flats Coffee Company",
+        "address": "323 N Main St, Tooele, UT 84074",
+        "phone": "(801) 560-8841",
+        "website": "https://saltflatcoffee.com",
+        "image": "images/saltflats.jpg",
+        "membership_level": 2,
+        "description": "By coffee lovers. For coffee lovers.",
+        "hours": "Tue-Fri 7am-2pm, Sat-Sun 8am-1pm, Closed Mon"
+    },
+    {
+        "name": "Holts Pharmacy",
+        "address": "134 W 1180 N St #12, Tooele, UT 84074",
+        "phone": "(435) 249-0767",
+        "website": "https://holtsrx.com/",
+        "image": "images/holts.jpg",
+        "membership_level": 1,
+        "description": "Your health is our priority.",
+        "hours": "Mon-Fri 9:30am-7pm, Sat 9:30am-2pm, Closed Sun"
+    },
+    {
+        "name": "Tooele Transcript Bulletin",
+        "address": "58 N. Main St. Tooele, UT 84074",
+        "phone": "(435) 882-0050",
+        "website": "https://tooeleonline.com",
+        "image": "images/ttb.jpeg",
+        "membership_level": 3,
+        "description": "Up-to-date news and advertising for Tooele County",
+        "hours": "Mon-Fri 9am-5pm, Closed Sat & Sun"
+    },
+    {
+        "name": "Another Man's Treasures",
+        "address": "14 W Vine St, Tooele, UT 84074",
+        "phone": "(435) 249-0742",
+        "website": "https://www.amttooele.com/",
+        "image": "images/amt.png",
+        "membership_level": 1,
+        "description": "Store buying, selling, and consigning antiques, furniture, jewelry, and other collectibles.",
+        "hours": "Mon-Wed & Sat 10am-6pm, Thurs-Fri 10am-8pm, Closed Sun"
+    },
+    {
         "name": "Nigh-time Doughnuts",
         "address": "299 N Main St, Tooele, UT 84074",
         "phone": "435-555-1234",
