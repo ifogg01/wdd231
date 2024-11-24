@@ -56,6 +56,28 @@
                 <p>Oquirrh Mountains</p>
             </div>
         </section>
+        <section class="comments-section">
+            <h2>Please Leave a Comment</h2>
+            <form id="commentForm" action="thanks.html" method="get">
+                
+                <div class="name-fields">
+                    <div class="field-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="commentsList" class="comments-list"></div>
+        </section>
+
 
         <section class="certificates">
             <h2>Web and Computer Programming Certificate</h2>

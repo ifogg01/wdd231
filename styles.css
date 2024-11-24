@@ -278,6 +278,116 @@ img{
         width: 70%;
     }
 }
+.comments-section {
+    background-color: #e8eaf6;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 85%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.comments-section h2 {
+    margin-bottom: 15px;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#commentForm .name-fields {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin-bottom: 10px; 
+}
+
+#commentForm .field-group {
+    flex: 1; 
+    min-width: 150px; 
+    max-width: calc(50% - 10px); 
+    box-sizing: border-box;
+}
+
+#commentForm .field-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#commentForm .field-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#commentForm label {
+    font-weight: bold;
+}
+
+#commentForm input,
+#commentForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#commentForm textarea {
+    margin-top: 10px;
+}
+
+#commentForm button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+#commentForm button:hover {
+    background-color: #6a6a6a;
+}
+
+.comments-list {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comment {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment .comment-text {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+
 .modal {
     display: none;
     position: fixed;
@@ -325,3 +435,4 @@ img{
 .close:hover {
     color: black;
 }
+
