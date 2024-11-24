@@ -13,7 +13,6 @@ function displayCourses(filter) {
         const courseButton = document.createElement('button');
         courseButton.classList.add('course', course.subject);
 
-        
         if (course.completed) {
             courseButton.classList.add('completed');  
         } else {
@@ -23,15 +22,16 @@ function displayCourses(filter) {
         courseButton.textContent = `${course.subject} ${course.number}: ${course.title}`;
         courseButton.title = course.description;
 
-        courseButton.addEventListener('click', () => displayCourseDetails(course));
+        courseButton.addEventListener('click', () => openCourseModal(course));
 
         courseListContainer.appendChild(courseButton);
     });
 }
 
-function displayCourseDetails(course) {
+function openCourseModal(course) {
+    const modal = document.getElementById('courseModal');
     const courseDetails = document.getElementById('courseDetails');
-    
+
     courseDetails.innerHTML = `
         <h3>${course.subject} ${course.number}: ${course.title}</h3>
         <p><strong>Description:</strong> ${course.description}</p>
@@ -39,8 +39,19 @@ function displayCourseDetails(course) {
         <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
         <p><strong>Completed:</strong> ${course.completed ? 'Yes' : 'No'}</p>
     `;
-    
-    courseDetails.style.display = 'block';
+
+    modal.style.display = 'flex';
+
+    const closeButton = modal.querySelector('.close');
+    closeButton.onclick = () => closeModal(modal);
+
+    window.onclick = event => {
+        if (event.target === modal) closeModal(modal);
+    };
+}
+
+function closeModal(modal) {
+    modal.style.display = 'none';
 }
 
 function setupFilterButtons() {
