@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Tooele City Chamber of Commerce Membership Application" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ifogg01.github.io/wdd231/" />
+    <meta property="og:image" content="https://files.tooelecity.gov/_assets_/images/logo.png" />
+    <meta property="og:image:alt" content="Logo of Tooele City Chamber of Commerce" />
+    <title>Membership Application Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/tcicon.jpg">
+    <link rel="stylesheet" href="thankyou.css">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lemon&display=swap" rel="stylesheet">
+    <script src="joinscript.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Membership Application Form</h1>
+            <form id="membership-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Cell Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input type="text" id="organization" name="organization" required>
+                </div>
+                <button type="submit" class="submit-button">Submit Application</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="membership-section">
+        <h2>Membership Levels</h2>
+        <div class="card" onclick="openModal('np-modal')">
+            <h3>Non-Profit Membership Level</h3>
+            <button>Learn More</button>
+        </div>
+        <div class="card" onclick="openModal('bronze-modal')">
+            <h3>Bronze Membership Level</h3>
+            <button>Learn More</button>
+        </div>
+        <div class="card" onclick="openModal('silver-modal')">
+            <h3>Silver Membership Level</h3>
+            <button>Learn More</button>
+        </div>
+        <div class="card" onclick="openModal('gold-modal')">
+            <h3>Gold Membership Level</h3>
+            <button>Learn More</button>
+        </div>
+    </div>
+    </div>
+
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <h3>Non-Profit Membership Benefits</h3>
+            <p>Includes community events and organizational support at no fee.</p>
+            <button class="close-button" onclick="closeModal('np-modal')">Close</button>
+        </div>
+    </div>
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <h3>Bronze Membership Benefits</h3>
+            <p>Includes discounts for local events and training sessions.</p>
+            <button class="close-button" onclick="closeModal('bronze-modal')">Close</button>
+        </div>
+    </div>
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <h3>Silver Membership Benefits</h3>
+            <p>Includes advertising support and premium event access.</p>
+            <button class="close-button" onclick="closeModal('silver-modal')">Close</button>
+        </div>
+    </div>
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <h3>Gold Membership Benefits</h3>
+            <p>Includes spotlight homepage positions, discounts, and exclusive event invitations.</p>
+            <button class="close-button" onclick="closeModal('gold-modal')">Close</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
