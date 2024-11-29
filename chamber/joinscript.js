@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('email').textContent = formData.email;
             document.getElementById('phone').textContent = formData.phone;
             document.getElementById('organization').textContent = formData.organization;
+            document.getElementById('membershiplevel').textContent = formData.membershipLevel;
             document.getElementById('submission-date').textContent = formData.submissionDate;
 
             localStorage.removeItem('formData');
