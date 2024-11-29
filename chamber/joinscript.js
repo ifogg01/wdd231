@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 organization: document.getElementById('organization').value,
+                membershiplevel: document.getElementById('membershiplevel').value,
                 submissionDate: new Date().toLocaleString() 
             };
+            
           
             localStorage.setItem('formData', JSON.stringify(formData));
             window.location.href = 'thankyou.html';
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('email').textContent = formData.email;
             document.getElementById('phone').textContent = formData.phone;
             document.getElementById('organization').textContent = formData.organization;
-            document.getElementById('membershiplevel').textContent = formData.membershipLevel;
+            document.getElementById('membershiplevel').textContent = formData.membershiplevel;
             document.getElementById('submission-date').textContent = formData.submissionDate;
 
             localStorage.removeItem('formData');
