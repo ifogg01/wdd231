@@ -4,22 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Tooele City Chamber of Commerce Membership Application">
+    <meta name="description"
+        content="Explore the Tooele City Chamber of Commerce to connect with local businesses, stay updated on community events, and discover opportunities to engage with the community.">
+    <meta property="og:title" content="Tooele City Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta name="description" content="Chamber of Commerce">
-    <meta property="og:url" content="https://ifogg01.github.io/wdd231/">
-    <meta property="og:image" content="https://files.tooelecity.gov/_assets_/images/logo.png">
+    <meta property="og:url" content="https://ifogg01.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="images/Logo.png">
     <meta property="og:image:alt" content="Logo of Tooele City Chamber of Commerce">
-    <title>Membership Application Form</title>
+    <meta name="author" content="Isaac Fogg">
+    <title>Tooele City Chamber of Commerce</title>
+    <link rel="icon" href="images/chicon.png">
+    <link rel="stylesheet" href="thankyou.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="joinscript.js" defer></script>
+    <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/test.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="images/tcicon.jpg">
-    <link rel="stylesheet" href="thankyou.css">
     <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lemon&display=swap" rel="stylesheet">
-    <script src="joinscript.js" defer></script>
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="images/chicon.png" alt="tooelecitylogo">
+            <span class="logo-text">Tooele Chamber of Commerce</span>
+        </div>
+
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav">
+            <a href="https://ifogg01.github.io/wdd231/" class="nav-link">Home</a>
+            <a href="https://ifogg01.github.io/wdd231/chamber/directory.html" class="nav-link">Directory</a>
+            <a href="#" class="nav-link">Discover</a>
+        </nav>
+    </header>
+    <br><br>
     <div class="container">
         <div class="form-section">
             <h1>Membership Application Form</h1>
@@ -46,29 +69,26 @@
                 </div>
                 <button type="submit" class="submit-button">Submit Application</button>
             </form>
-
         </div>
-    </div>
-
-    <div class="membership-section">
-        <h2>Membership Levels</h2>
-        <div class="card" onclick="openModal('np-modal')">
-            <h3>Non-Profit Membership Level</h3>
-            <button>Learn More</button>
+        <div class="membership-section">
+            <h2>Membership Levels</h2>
+            <div class="card" onclick="openModal('np-modal')">
+                <h3>Non-Profit Membership Level</h3>
+                <button>Learn More</button>
+            </div>
+            <div class="card" onclick="openModal('bronze-modal')">
+                <h3>Bronze Membership Level</h3>
+                <button>Learn More</button>
+            </div>
+            <div class="card" onclick="openModal('silver-modal')">
+                <h3>Silver Membership Level</h3>
+                <button>Learn More</button>
+            </div>
+            <div class="card" onclick="openModal('gold-modal')">
+                <h3>Gold Membership Level</h3>
+                <button>Learn More</button>
+            </div>
         </div>
-        <div class="card" onclick="openModal('bronze-modal')">
-            <h3>Bronze Membership Level</h3>
-            <button>Learn More</button>
-        </div>
-        <div class="card" onclick="openModal('silver-modal')">
-            <h3>Silver Membership Level</h3>
-            <button>Learn More</button>
-        </div>
-        <div class="card" onclick="openModal('gold-modal')">
-            <h3>Gold Membership Level</h3>
-            <button>Learn More</button>
-        </div>
-    </div>
     </div>
 
     <div id="np-modal" class="modal">
@@ -100,7 +120,22 @@
         </div>
     </div>
 
-
+    <footer class="footer">
+        <div class="contact-info">
+            <p>Tooele Chamber of Commerce<br>154 S Main St, Tooele, UT 84074</p>
+            <p>Email: chamber@tooelechamber.com<br>Phone: (435) 882-0690</p>
+        </div>
+        <div class="social-icons">
+            <img src="images/youtube.png" alt="YouTube">
+            <img src="images/twitter.png" alt="Twitter">
+            <img src="images/facebook.png" alt="Facebook">
+            <img src="images/linked.png" alt="LinkedIn">
+        </div>
+        <div class="credits">
+            <p>WDD231 Class Project<br>Isaac Fogg</p>
+            <p>© 2024 Tooele Chamber of Commerce<br>Last Modification: 10/21/2022 22:12:35</p>
+        </div>
+    </footer>
 </body>
 
 </html>
