@@ -903,7 +903,7 @@ footer {
     .sidebar .card p {
         font-size: 0.9rem;
     }
-}
+
 @media (max-width: 480px) {
     .sidebar {
         width: 100%; /* Full width on the smallest screens */
