@@ -7,15 +7,56 @@ document.addEventListener("DOMContentLoaded", function () {
         navToggle.classList.toggle("open");
     });
 
+    document.addEventListener("click", function (event) {
+        if (!nav.contains(event.target) && !navToggle.contains(event.target)) {
+            nav.classList.remove("nav-open");
+            navToggle.classList.remove("open");
+        }
+    });
+    displayLastVisitMessage(); 
     loadMembers();
     loadSpotlight();
     updateLastModified();
     loadWeather();
     loadForecast();
-    loadEventCalendar(); // Added function call for the event calendar
-
     setupViewToggle();
-});
+    });
+
+function displayLastVisitMessage() {
+    const messageContainer = document.querySelector(".visit-message");
+
+    if (!messageContainer) {
+        console.error("Visit message container not found in the DOM.");
+        return;
+    }
+
+    const now = new Date();
+    const lastVisit = localStorage.getItem("lastVisit");
+    let message = "";
+
+    if (!lastVisit) {
+        message = "Welcome! Let us know if you have any questions.";
+    } else {
+        const lastVisitDate = new Date(lastVisit);
+        const timeDifference = now - lastVisitDate;
+        const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+        if (daysDifference < 1) {
+            message = "Back so soon! Awesome!";
+        } else if (daysDifference === 1) {
+            message = "You last visited 1 day ago.";
+        } else {
+            message = `You last visited ${daysDifference} days ago.`;
+        }
+    }
+
+    messageContainer.textContent = message; 
+
+    localStorage.setItem("lastVisit", now.toISOString());
+    console.log("Visitor message displayed:", message);
+}
+
+
 
 function setupViewToggle() {
     const gridViewButton = document.getElementById("grid-view");
@@ -92,7 +133,6 @@ function displayMembers(members) {
 
     console.log("Business directory populated with member data.");
 }
-
 async function loadSpotlight() {
     try {
         const response = await fetch("data/members.json");
