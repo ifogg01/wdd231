@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     loadMembers();
-    loadSpotlight(); 
+    loadSpotlight();
     updateLastModified();
     loadWeather();
     loadForecast();
+    loadEventCalendar(); // Added function call for the event calendar
 
     setupViewToggle();
 });
@@ -189,54 +190,4 @@ function displayWeather(weatherData) {
     weatherContainer.innerHTML = weatherHTML;
 
     console.log("Weather data displayed.");
-}
-
-async function loadForecast() {
-    const apiKey = "86493188d381051ddea532b770ad1bf1";
-    const city = "Tooele";
-    const unit = "imperial";
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&appid=${apiKey}`;
-
-    try {
-        const response = await fetch(forecastUrl);
-        if (!response.ok) {
-            throw new Error("Failed to fetch forecast data");
-        }
-
-        const forecastData = await response.json();
-        displayForecast(forecastData);
-    } catch (error) {
-        console.error("Error loading forecast:", error);
-    }
-}
-
-function displayForecast(forecastData) {
-    const forecastContainer = document.querySelector(".weather-forecast");
-    forecastContainer.innerHTML = "";
-
-    if (!forecastData || !forecastData.list) {
-        forecastContainer.innerHTML = "<p>Unable to retrieve forecast data.</p>";
-        return;
-    }
-
-    const dailyForecasts = forecastData.list.filter((entry) => entry.dt_txt.includes("12:00:00"));
-
-    dailyForecasts.forEach((forecast) => {
-        const { temp } = forecast.main;
-        const { description, icon } = forecast.weather[0];
-        const date = new Date(forecast.dt * 1000).toLocaleDateString();
-
-        const forecastHTML = `
-            <div class="forecast-item">
-                <p>${date}</p>
-                <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}">
-                <p>${description}</p>
-                <p>Temp: ${temp}°F</p>
-            </div>
-        `;
-
-        forecastContainer.innerHTML += forecastHTML;
-    });
-
-    console.log("Weather forecast data displayed.");
 }
