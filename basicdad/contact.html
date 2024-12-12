@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Contact Dad">
+        <meta property="og:type" content="website">
+        <meta name="description" content="Basic Dad Site">
+        <meta property="og:url" content="https://ifogg01.github.io/wdd231/basicdad">
+        <meta property="og:image" content="images/Logo.png">
+        <meta property="og:image:alt" content="Logo of Basic Dad">
+        <title>The Basic Dad</title>
+        <meta name="author" content="Isaac Fogg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="images/dadico2.jpg">
+        <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Lemon&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+        <script src="scripts.js" defer></script>
+    </head>
+
+<body>
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="images/basicdad.png" alt="Basic Logo">
+            <div class="logo-caption">Home</div>
+        </a>
+        <div class="title-container">
+            <div class="hm">
+                <h1>The Basic Dad</h1>
+            </div>
+            <div class="hm1">
+                <i>Embrace the Basic</i>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a id="list" href="dadisms.html">"Dad-isms"</a></li>
+                <li><a id="cloth" href="dadwear.html">Dad Fashion</a></li>
+                <li><a id="advice" href="dadadvice.html">"Dad-vice"</a></li>
+            </ul>
+        </nav>
+        <button type="button" onclick="location.href='contact.html'">Contact</button>
+    </header>
+
+    <div class="subheading">
+        <h5>We would love to hear your feedback. For Questions, Comments, or Concerns please send us a
+            message.<br><br>CONTACT US <br><br></h5>
+    </div>
+
+    <div id="feedback">
+        <form id="contact-form">
+            <h2>Contact Us</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+
+    <section class="btmmsg">
+        <h3>For MORE great Dad content<br> Please visit some of my favorite Dad sites listed below</h3>
+    </section>
+
+    <footer>
+        <div class="social">
+            <a href="https://bestlifeonline.com/30-things-all-good-dads-should-know-how-to-do/" target="_blank">
+                <img class="fa" src="images/bestlife.png" alt="bestlifeicon">
+                <p class="linkmsg">Best Life</p>
+            </a>
+            <a href="https://www.fatherly.com/" target="_blank">
+                <img class="fa" src="images/Fatherly.png" alt="fatherlyicon">
+                <p class="linkmsg">Fatherly</p>
+            </a>
+            <a href="https://www.howtobeadad.com/" target="_blank">
+                <img class="fa" src="images/htbad.png" alt="htbadicon">
+                <p class="linkmsg">How To Be A Dad</p>
+            </a>
+            <a href="https://www.thedad.com/" target="_blank">
+                <img class="fa" src="images/thedad.jpg" alt="thedadicon">
+                <p class="linkmsg">The Dad</p>
+            </a>
+            <a href="https://www.theodysseyonline.com/funny-dad-things" target="_blank">
+                <img class="fa" src="images/odyssey.png" alt="odysseyicon">
+                <p class="linkmsg">Odyssey</p>
+            </a>
+        </div>
+    </footer>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
