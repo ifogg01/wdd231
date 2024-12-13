@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     addRandomVideo();
     addForm();
 });
@@ -35,7 +35,6 @@ function addRandomVideo() {
         })
         .catch(error => console.error('Error fetching TikTok links:', error));
 }
-
 
 function addForm() {
     const feedbackDiv = document.getElementById("feedback");
@@ -74,15 +73,30 @@ function addForm() {
         feedbackDiv.innerHTML = formHTML;
     }
 
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
         event.preventDefault();
 
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
+        const modal = document.getElementById("modal");
+        const modalContent = document.querySelector(".modal-content");
 
-        alert(`Thank you for your submission, ${data.fname} ${data.lname}!`);
-        console.log("Form Data Submitted: ", data);
+        modalContent.innerHTML = `
+            <span class="close-btn">&times;</span>
+            <h2>Thank You, ${data.fname}!</h2>
+            <p>Your message has been successfully sent. We will get back to you soon.</p>
+        `;
 
-        window.location.href = 'thankyou.html';
+        modal.style.display = "block";
+
+        document.querySelector(".close-btn").addEventListener("click", () => {
+            window.location.href = "thankyou.html";
+        });
+
+        window.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                window.location.href = "thankyou.html";
+            }
+        });
     });
 }
