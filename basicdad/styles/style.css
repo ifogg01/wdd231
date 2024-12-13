@@ -150,6 +150,7 @@ nav a {
 body{
    background-image:url("../images/woodback1.png");
    background-size: cover;
+   position: relative;
    
 }
 
